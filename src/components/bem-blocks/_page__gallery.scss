@@ -1,0 +1,20 @@
+
+.gallery {
+
+   &__container {
+   }
+
+   &__content {
+   }
+
+   &__grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap:40px
+
+   }
+
+   &__item {
+      background: red;
+   }
+}
