@@ -51,12 +51,16 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
    &__trainers {
    }
    &__gallery {
+      margin-bottom: 200px;
+   }
+   &__quote {
+      background: #F8F8F8;
    }
 
 }
 
 .page__home,.header {
-  background-image: url('../img/bg.jpg') ;
+  background-image: var(--bg) ;
   background-repeat: no-repeat;
   background-size: 100%;
   background-attachment: fixed; /* !!! */
@@ -69,7 +73,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
    width: 100%;
 }
 
-
+.hidden {
+   display: none;
+}
 .title {
    font-family: 'Raleway';
    font-style: normal;
@@ -79,7 +85,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
    letter-spacing: 0.6px;
    color: #01353E;
    text-align: center;
-   margin-bottom: 100px;
    position: relative;
    display: inline-block;
    &::after{
@@ -95,4 +100,15 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
       top:0;
       right: -40px;
    }  
+}
+
+.horisontal {
+   grid-column: span 2;
+}
+.vertical {
+   grid-row: span 2;
+}
+.big {
+   grid-row: span 2;
+   grid-column: span 2;
 }
