@@ -1,0 +1,67 @@
+.blog {
+
+   &__container {
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   &__title {
+      margin-bottom: 230px;
+      text-align: center;
+   }
+}
+.slider {
+
+   &__wrapper {
+      display: inline-block;
+      vertical-align: center;
+      width: 100%;
+      height: 800px;
+   }
+
+   &__item {
+      width:100%;
+      height:100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(
+         rgba(0, 0, 0, 0.4), 
+         rgba(0, 0, 0, 0.4)
+       ) , var(--bg) center / cover ;
+   }
+
+   &__text {
+      margin-left: 500px;
+   }
+
+   &__title {
+      font-family: 'Roboto Condensed';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 56px;
+      /* or 117% */
+
+      letter-spacing: 0.6px;
+      
+      color: #FFFFFF;
+   }
+
+   &__desc {
+      font-family: 'Roboto Condensed';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 18px;
+      /* identical to box height, or 129% */
+
+      letter-spacing: 0.6px;
+
+      color: #FFFFFF;
+   }
+}

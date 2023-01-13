@@ -8,7 +8,7 @@
 :focus,:active{outline: none;}
 a:focus,a:active{outline: none;}
 nav,footer,header,aside{display: block;}
-html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-family: 'Manrope', sans-serif;background: #fbfbfb;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-family: 'Manrope', sans-serif;background: #fff;}
 input,button,textarea{font-family:inherit;}
 input::-ms-clear{display: none;}
 button{cursor: pointer;}
@@ -42,9 +42,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 .page {
    &__home {
    }
-   
 	&__about {
-	}
+   }
    &__advantages {
       background: #f2f2f2;
    }
@@ -56,7 +55,28 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
    &__quote {
       background: #F8F8F8;
    }
-
+   
+   &__video {
+      margin: 200px 0;
+   }
+   &__blog {
+      margin-bottom: 200px;
+   }
+   &__team {
+      margin-bottom: 200px;
+   }
+   &__packages {
+      padding: 200px 0;
+      background: #F8F8F8;
+   }
+   &__map {
+      margin: 200px 0;
+   }
+   &__form {
+   }
+   &__contacts {
+      margin: 200px 0;
+   }
 }
 
 .page__home,.header {
@@ -105,10 +125,12 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 .horisontal {
    grid-column: span 2;
 }
-.vertical {
-   grid-row: span 2;
+
+:root {
+   --swiper-pagination-color: cyan;
+   --swiper-pagination-bullet-inactive-color: white;
 }
-.big {
-   grid-row: span 2;
-   grid-column: span 2;
+
+a {
+   color: black;
 }

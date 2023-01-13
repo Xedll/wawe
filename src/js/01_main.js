@@ -1,4 +1,27 @@
-let images = []; //зачаток блядской галереи. Сделать проверки на соотношение сторон фото и ставить соотвтественные классы
+//Swiper
+
+const swiper = new Swiper('.swiper', {
+   spaceBetween: 10,
+   speed: 500,
+   pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+
+   },
+   keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+      pageUpDown: true,
+   },
+   autoplay: {
+      delay: 5000
+   },
+   loop: true,
+})
+
+//Gallery
+let images = [];
 for (let i = 0; i < document.querySelectorAll('.gallery__item').length; i++) {
 
    let img = new Image();
@@ -21,9 +44,6 @@ for (let i = 0; i < document.querySelectorAll('.gallery__item').length; i++) {
    images.push(img)
 }
 
-window.onload = () => {
-
-}
 document.addEventListener('click', (e) => {
    if (e.target.className == 'gallery__group') {
       for (let i of document.querySelectorAll('.gallery__item')) {
@@ -41,5 +61,13 @@ document.addEventListener('click', (e) => {
       for (let i of temp) {
          i.classList.remove('hidden')
       }
+   }
+
+   if (e.target.tagName == 'BUTTON') {
+      e.preventDefault()
+   }
+   if (e.target.dataset.navAnchor) { //Прокрутка страницы
+      e.preventDefault()
+      document.querySelector(`#${e.target.dataset.navAnchor}`).scrollIntoView({ behavior: 'smooth' })
    }
 })

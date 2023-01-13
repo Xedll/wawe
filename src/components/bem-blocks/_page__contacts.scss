@@ -1,0 +1,36 @@
+.contacts {
+
+   &__container {
+   }
+
+   &__content {
+   }
+
+   &__flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &>*:not(:last-child){
+         margin-right: 10px;
+      }
+   }
+
+   &__item {
+   }
+
+   &__link {
+      font-family: 'Roboto Condensed';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 18px;
+      /* or 75% */
+      letter-spacing: 0.6px;
+
+      color: #242121;
+      transition: color .2s;
+      &:hover {
+         color: #00B2A0;
+      }
+   }
+}
