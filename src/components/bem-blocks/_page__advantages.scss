@@ -6,9 +6,9 @@
    }
 
    &__content {
-      &>*:not(:last-child){
-         margin-bottom: 100px;
-      }
+
+      padding: 0 25px;
+
    }
 
    &__title {
@@ -22,8 +22,9 @@
 
    &__grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
       gap: 50px 74px;
+      margin-bottom: 100px;
    }
 
    &__item {

@@ -18,7 +18,7 @@
    }
 
    &__item {
-      background: var(--bg);
+      background: var(--bg) center / cover;
    }
 
    &__title {
@@ -28,6 +28,7 @@
    
    &__nav {
       display: flex;
+      flex-wrap: wrap;
       &>*:not(:last-child){
          margin-right: 20px;
       }
@@ -45,6 +46,7 @@
       cursor: pointer;
       transition: color .2s;
       color: #242121;
+      margin-bottom: 25px;
       &:hover {
          color:#00B2A0;
       }

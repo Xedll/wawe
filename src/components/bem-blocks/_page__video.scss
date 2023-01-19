@@ -19,7 +19,8 @@
    }
 
    &__list {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       justify-content: center;
       align-items: center;
       &>*{
@@ -58,8 +59,11 @@
    }
 
    &__number {
+      white-space: nowrap;
+
    }
 
    &__desc {
+      white-space: nowrap;
    }
 }

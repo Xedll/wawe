@@ -5,12 +5,14 @@
 		}
 
 		&__content {
-
-		}
+         &>*:not(:last-child){
+            text-align: center;
+         }
+      }
 
 		&__title {
          margin-bottom: 100px;
-         text-align: center;
+         padding-right: 50px;
 		}
 
 		&__grid {
