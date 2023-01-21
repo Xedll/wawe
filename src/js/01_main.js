@@ -1,3 +1,5 @@
+const titles = Array.from(document.querySelectorAll('.title'))
+
 //Swiper
 
 const swiper = new Swiper('.swiper', {
@@ -71,3 +73,17 @@ document.addEventListener('click', (e) => {
       document.querySelector(`#${e.target.dataset.navAnchor}`).scrollIntoView({ behavior: 'smooth' })
    }
 })
+
+
+const setSpanWrapper = function (target) {
+   let text = target.textContent
+   let lastLetter = '<span class="title__after">' + text.at(-1) + '<span/>'
+   let fullTitle = Array.from(text).slice(0, -1).join('')
+   target.innerHTML = fullTitle + lastLetter
+}
+
+window.onload = () => {
+   titles.forEach(item => {
+      setSpanWrapper(item)
+   })
+}

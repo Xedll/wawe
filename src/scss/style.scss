@@ -80,7 +80,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 }
 
 .page__home,.header {
-  background-image: url(../img/home/bg.webp);
+  background-image: var(--bg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-attachment: fixed; /* !!! */
@@ -94,31 +94,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 
 .hidden {
    display: none;
-}
-.title {
-   font-family: 'Raleway';
-   font-style: normal;
-   font-weight: 600;
-   font-size: 48px;
-   line-height: 56px;
-   letter-spacing: 0.6px;
-   color: #01353E;
-   text-align: center;
-   position: relative;
-   display: inline-block;
-   &::after{
-      content: '/';
-      font-family: 'Raleway';
-      font-style: normal;
-      font-weight: 600;
-      font-size: 72px;
-      line-height: 85px;
-      letter-spacing: 0.6px;
-      color: #00B2A0;
-      position: absolute;
-      top:0;
-      right: -40px;
-   }  
 }
 
 .horisontal {
@@ -134,9 +109,40 @@ a {
    color: black;
 }
 
+.title {
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 600;
+   font-size: 48px;
+   letter-spacing: 0.6px;
+   color: #01353E;
+   padding: 0 25px;
+   text-align: center;
+   position: relative;
+   display: inline-block;
+}
+.title__after {
+   position: relative;
+   &::after{
+      content: '/';
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 72px;
+      letter-spacing: 0.6px;
+      color: #00B2A0;
+      position: absolute;
+      top: 5px;
+      right: -20px;
+   }  
+}
+
 @media (max-width:1000px) {
    .title {
-      font-size: 38px;
+      font-size: 40px;
+   }
+   .title__after::after {
+      font-size: 60px;
    }
    .advantages {
       &__grid {
@@ -317,7 +323,10 @@ a {
 
 @media (max-width:800px) {
    .title {
-      font-size: 28px;
+      font-size: 32px;
+   }
+   .title__after::after {
+      font-size: 50px;
    }
    .page {
       &__video {
@@ -379,20 +388,18 @@ a {
 }
 
 @media (max-width:700px) {
+   .title__after::after {
+      font-size: 40px;
+   }
+   .title {
+      font-size: 28px;
+   }
    .page {
       &__video {
          margin: 25px 0;
       }
       &__contacts {
          margin: 75px 0;
-      }
-   }
-   .title {
-      font-size: 24px;
-      &::after {
-         font-size: 30px;
-         right:-15px;
-         top:-5px;
       }
    }
    .gallery {
@@ -439,9 +446,6 @@ a {
 }
 
 @media (max-width:500px) {
-   .title {
-      font-size: 20px;
-   }
    .header  {
       &__list {
          grid-template-columns: repeat(2, 1fr);
@@ -479,9 +483,6 @@ a {
 }
 
 @media (max-width:400px) {
-   .title {
-      font-size: 14px;
-   }
    .home {
       &__title {
          font-size: 50px;
@@ -521,6 +522,9 @@ a {
       }
       &__text {
          padding: 0 20px;
+      }
+      &__wrapper {
+         height: 300px;
       }
    }
    .page {
